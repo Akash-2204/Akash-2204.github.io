@@ -3,7 +3,7 @@
 import React from 'react';
 import uniqid from 'uniqid';
 import { projects } from '../../portfolio';
-import './Projects.css';
+import './projects.css';
 import ProjectContainer from './projectContainer/projectContainer';
 
 interface Project {

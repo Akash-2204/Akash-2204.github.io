@@ -1,7 +1,7 @@
 "use client";
 
 import { contact } from '../../portfolio';
-import './Contact.css';
+import './contact.css';
 
 const Contact: React.FC = () => {
   if (!contact.email) return null;

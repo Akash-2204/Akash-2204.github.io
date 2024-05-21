@@ -1,7 +1,7 @@
 "use client";
 
 import { about } from '../portfolio';
-import './Footer.css';
+import './footer.css';
 
 const Footer: React.FC = () => (
   <footer className="footer">

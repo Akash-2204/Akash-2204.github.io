@@ -1,6 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import './About.css';
+import './about.css';
 import { about } from '../../portfolio'; 
 
 interface SocialLinks {

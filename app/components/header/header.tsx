@@ -2,7 +2,7 @@
 
 import { header } from '../../portfolio';
 import Navbar from '../navbar/navbar';
-import './Header.css';
+import './header.css';
 
 interface HeaderProps {
   homepage: string;

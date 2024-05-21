@@ -1,6 +1,6 @@
 "use client";
 import { useContext } from 'react';
-import './App.css';
+import './app.css';
 import About from './components/about/about';
 import { ThemeContext } from './contexts/theme';
 import Header from './components/header/header';

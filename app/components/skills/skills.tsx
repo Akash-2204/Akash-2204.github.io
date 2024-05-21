@@ -3,7 +3,7 @@
 import React from "react";
 import uniqid from "uniqid";
 import { skills } from "../../portfolio";
-import "./Skills.css";
+import "./skills.css";
 
 const Skills: React.FC = () => {
     return (

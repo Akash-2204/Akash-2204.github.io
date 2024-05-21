@@ -7,7 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { ThemeContext } from "../../contexts/theme";
 import { projects, skills, contact } from "../../portfolio";
-import "./Navbar.css";
+import "./navbar.css";
 
 const Navbar: React.FC = () => {
   const themeContext = useContext(ThemeContext);
