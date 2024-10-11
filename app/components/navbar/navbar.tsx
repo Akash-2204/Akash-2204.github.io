@@ -3,8 +3,6 @@
 import { useContext, useState } from "react";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import { ThemeContext } from "../../contexts/theme";
 import { projects, skills, contact } from "../../portfolio";
 import "./navbar.css";
@@ -27,8 +25,8 @@ const Navbar: React.FC = () => {
         style={{ display: showNavList ? "flex" : undefined }}
         className="nav__list"
       >
-        {projects.length ? (
-          <li className="nav__list-item">
+        {projects.length > 0 && (
+          <ul className="nav__list-item">
             <a
               href="#projects"
               onClick={toggleNavList}
@@ -36,11 +34,11 @@ const Navbar: React.FC = () => {
             >
               Projects
             </a>
-          </li>
-        ) : null}
+          </ul>
+        )}
 
-        {Object.keys(skills).length ? (
-          <li className="nav__list-item">
+        {Object.keys(skills).length > 0 && (
+          <ul className="nav__list-item">
             <a
               href="#skills"
               onClick={toggleNavList}
@@ -48,11 +46,11 @@ const Navbar: React.FC = () => {
             >
               Skills
             </a>
-          </li>
-        ) : null}
+          </ul>
+        )}
 
-        {contact.email ? (
-          <li className="nav__list-item">
+        {contact.email && (
+          <ul className="nav__list-item">
             <a
               href="#contact"
               onClick={toggleNavList}
@@ -60,27 +58,18 @@ const Navbar: React.FC = () => {
             >
               Contact
             </a>
-          </li>
-        ) : null}
+          </ul>
+        )}
       </ul>
 
-      <button
-        type="button"
-        onClick={toggleTheme}
-        className="btn btn--icon nav__theme"
-        aria-label="toggle theme"
-      >
-        {themeName === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
-      </button>
-
-      {/* <button
-        type="button"
-        onClick={toggleNavList}
-        className="btn btn--icon nav__hamburger"
-        aria-label="toggle navigation"
-      >
-        {showNavList ? <CloseIcon /> : <MenuIcon />}
-      </button> */}
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className="btn btn--icon nav__theme"
+          aria-label="toggle theme"
+        >
+          {themeName === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
+        </button>
     </nav>
   );
 };

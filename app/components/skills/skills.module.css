@@ -1,0 +1,43 @@
+.section {
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center; /* Center the title */
+  margin-bottom: 2rem;
+}
+
+.container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center the items */
+}
+
+.skillCategory {
+  margin: 1rem; /* Space between categories */
+  flex: 1 1 200px; /* Allow categories to grow and shrink */
+  min-width: 200px; /* Minimum width for categories */
+  text-align: center; /* Center text in each category */
+}
+
+.subTopic {
+  font-size: 1.5rem; /* Font size for subtopics */
+  margin-bottom: 1rem; /* Space between subtopic and skills */
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.listItem {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.listItem:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Example hover effect */
+}

@@ -9,7 +9,7 @@ const about = {
   description:
     "Experienced Full-Stack Developer with a proven track record of designing and implementing robust applications. Specialized in React,Flutter, NodeJs, MongoDb, ExpressJs,(MERN stack) NextJS, SQL, I excel in optimizing performance and delivering scalable solutions. Proficient in Agile methodologies, project leadership, codebase refactoring, and implementing CI/CD pipelines. Strong problem-solving and communication skills contribute to successful project outcomes.",
   resume:
-    "https://drive.google.com/file/d/1PKIbOZxzCp05yPIRR7-YM1IjSfkOm8Gj/view?usp=sharing",
+    "https://drive.google.com/file/d/1axWbdj17I0pcwZeNbDZuh9wSkGUPqi0v/view?usp=drive_link",
   social: {
     linkedin: "https://www.linkedin.com/in/akash-thirumuruganantham/",
     github: "https://github.com",
@@ -50,43 +50,28 @@ const projects = [
 ];
 
 const skills = {
-  "Programming Languages": [
-    "Python",
-    "JavaScript",
-    "TypeScript",
-    "Dart",
-    "C/C++",
-    "Java",
-    "SQL",
-    "HTML",
-    "CSS",
-    "JSON",
-    "YAML"
-  ],
-  "Frameworks": [
+  "Front-End": [
     "React.js",
-    "Node.js",
-    "Flutter",
-    "NestJS",
     "Next.js",
-    "ExpressJS",
-    "RestAPI",
-    "gRPC",
-    "Pandas",
-    "NumPy"
-  ],
-  "Libraries": [
-    "Jest",
-    "Redis",
-    "Elasticsearch",
-    "Kibana",
     "Redux",
     "JQuery",
-    "Axios/Fetch",
-    "Mongoose",
+    "HTML",
+    "CSS",
+    "SCSS",
+    "Flutter",
+    "Axios/Fetch"
+  ],
+  "Back-End": [
+    "Node.js",
+    "NestJS",
+    "ExpressJS",
+    "RestAPI",
+    "GraphQL",
+    "gRPC",
+    "Redis",
     "Protocol Buffers"
   ],
-  "Data and Database Technology": [
+  "Database": [
     "MongoDB",
     "MySQL",
     "Redis",
@@ -95,17 +80,8 @@ const skills = {
     "GraphQL",
     "Kafka"
   ],
-  "DevOps and Tools": [
-    "Jenkins",
-    "Docker",
-    "GitHub",
-    "CI/CD",
-    "Microservice Architecture",
-    "Shell scripting",
-    "Git"
-  ],
-  "AWS Tools": [
-    "EC2",
+  "Cloud": [
+    "AWS EC2",
     "S3",
     "RDS",
     "Lambda",
@@ -113,9 +89,35 @@ const skills = {
     "Elastic Beanstalk",
     "IAM",
     "CloudWatch",
-    "AWS CloudFormation"
+    "AWS CloudFormation",
+    "Google Cloud",
+    "Azure"
+  ],
+  "DevOps and Testing": [
+    "Jenkins",
+    "Docker",
+    "CI/CD",
+    "Microservice Architecture",
+    "Jest",
+    "Cypress",
+    "GitHub",
+    "ELK Stack",
+    "Shell scripting",
+    "Git"
+  ],
+  "Programming Languages": [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "Dart",
+    "C/C++",
+    "Java",
+    "SQL",
+    "JSON",
+    "YAML"
   ]
 };
+
 
 const contact = {
   email: "athirumuruganantham@hawk.iit.edu",
