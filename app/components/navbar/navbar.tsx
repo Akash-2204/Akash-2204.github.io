@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         className="nav__list"
       >
         {projects.length > 0 && (
-          <li className="nav__list-item">
+          <ul className="nav__list-item">
             <a
               href="#projects"
               onClick={toggleNavList}
@@ -34,11 +34,11 @@ const Navbar: React.FC = () => {
             >
               Projects
             </a>
-          </li>
+          </ul>
         )}
 
         {Object.keys(skills).length > 0 && (
-          <li className="nav__list-item">
+          <ul className="nav__list-item">
             <a
               href="#skills"
               onClick={toggleNavList}
@@ -46,11 +46,11 @@ const Navbar: React.FC = () => {
             >
               Skills
             </a>
-          </li>
+          </ul>
         )}
 
         {contact.email && (
-          <li className="nav__list-item">
+          <ul className="nav__list-item">
             <a
               href="#contact"
               onClick={toggleNavList}
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
             >
               Contact
             </a>
-          </li>
+          </ul>
         )}
       </ul>
 
