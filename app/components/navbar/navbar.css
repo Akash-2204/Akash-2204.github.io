@@ -18,6 +18,16 @@
   padding: 0; /* Remove padding for better alignment */
   display: flex; /* Use flexbox for alignment */
   align-items: center; /* Center icon vertically */
+  transition: opacity 0.2s ease; /* Smooth transition for hover effect */
+}
+
+/* Optional: Adjust icon size for better appearance */
+.nav__theme svg {
+  font-size: 1.5rem; /* Adjust icon size as needed */
+}
+
+.nav__theme:hover {
+  opacity: 0.7; /* Add a hover effect for better interactivity */
 }
 
 @media (max-width: 600px) {

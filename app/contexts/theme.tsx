@@ -9,38 +9,44 @@ interface ThemeContextState {
 const ThemeContext = createContext<ThemeContextState | undefined>(undefined);
 
 const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [themeName, setThemeName] = useState<string>(() => {
-    return localStorage.getItem('themeName') || 
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  });
+  const [themeName, setThemeName] = useState<string>('dark'); // Default to light theme
 
   useEffect(() => {
-    const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const storedTheme = localStorage.getItem('themeName');
-    
-    if (!storedTheme) {
-      setThemeName(darkMediaQuery.matches ? 'dark' : 'light');
-    }
+    // Only access localStorage and window when in the browser
+    if (typeof window !== 'undefined') {
+      const storedTheme = localStorage.getItem('themeName');
+      const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    const listener = (e: MediaQueryListEvent) => {
-      if (!localStorage.getItem('themeName')) {
-        setThemeName(e.matches ? 'dark' : 'light');
+      if (storedTheme) {
+        setThemeName(storedTheme);
+      } else {
+        setThemeName(darkMediaQuery.matches ? 'dark' : 'light');
       }
-    };
-    
-    darkMediaQuery.addEventListener('change', listener);
-    return () => darkMediaQuery.removeEventListener('change', listener);
+
+      const listener = (e: MediaQueryListEvent) => {
+        if (!localStorage.getItem('themeName')) {
+          setThemeName(e.matches ? 'dark' : 'light');
+        }
+      };
+
+      darkMediaQuery.addEventListener('change', listener);
+      return () => darkMediaQuery.removeEventListener('change', listener);
+    }
   }, []);
 
   useEffect(() => {
-    document.body.setAttribute('data-theme', themeName);
-    localStorage.setItem('themeName', themeName);
+    if (typeof window !== 'undefined') {
+      document.body.setAttribute('data-theme', themeName);
+      localStorage.setItem('themeName', themeName);
+    }
   }, [themeName]);
 
   const toggleTheme = () => {
     const newTheme = themeName === 'dark' ? 'light' : 'dark';
     setThemeName(newTheme);
-    localStorage.setItem('themeName', newTheme);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('themeName', newTheme);
+    }
   };
 
   return (

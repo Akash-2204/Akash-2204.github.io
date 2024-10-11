@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         className="nav__list"
       >
         {projects.length > 0 && (
-          <ul className="nav__list-item">
+          <li className="nav__list-item">
             <a
               href="#projects"
               onClick={toggleNavList}
@@ -34,11 +34,11 @@ const Navbar: React.FC = () => {
             >
               Projects
             </a>
-          </ul>
+          </li>
         )}
 
         {Object.keys(skills).length > 0 && (
-          <ul className="nav__list-item">
+          <li className="nav__list-item">
             <a
               href="#skills"
               onClick={toggleNavList}
@@ -46,11 +46,11 @@ const Navbar: React.FC = () => {
             >
               Skills
             </a>
-          </ul>
+          </li>
         )}
 
         {contact.email && (
-          <ul className="nav__list-item">
+          <li className="nav__list-item">
             <a
               href="#contact"
               onClick={toggleNavList}
@@ -58,18 +58,18 @@ const Navbar: React.FC = () => {
             >
               Contact
             </a>
-          </ul>
+          </li>
         )}
       </ul>
 
-        <button
-          type="button"
-          onClick={toggleTheme}
-          className="btn btn--icon nav__theme"
-          aria-label="toggle theme"
-        >
-          {themeName === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
-        </button>
+      <button
+        type="button"
+        onClick={toggleTheme}
+        className="btn btn--icon nav__theme"
+        aria-label="toggle theme"
+      >
+        {themeName === "dark" ? <DarkModeIcon fontSize="small" /> : <LightModeIcon fontSize="small" />}
+      </button>
     </nav>
   );
 };
