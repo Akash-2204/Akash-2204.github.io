@@ -1,7 +1,7 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import './about.css';
-import { about } from '../../portfolio'; 
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import "./about.css";
+import { about } from "../../portfolio";
 
 interface SocialLinks {
   github?: string;
@@ -32,7 +32,8 @@ const About: React.FC = () => {
 
       <div className="about__contact center">
         {resume && (
-          <a href={resume}>
+          <a href={resume} target="_blank" 
+          rel="noopener noreferrer">
             <span className="btn btn--outline">Resume</span>
           </a>
         )}
@@ -40,13 +41,25 @@ const About: React.FC = () => {
         {social && (
           <>
             {social.github && (
-              <a href={social.github} aria-label="github" className="link link--icon">
+              <a
+                href={social.github}
+                aria-label="github"
+                className="link link--icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GitHubIcon />
               </a>
             )}
 
             {social.linkedin && (
-              <a href={social.linkedin} aria-label="linkedin" className="link link--icon">
+              <a
+                href={social.linkedin}
+                aria-label="linkedin"
+                className="link link--icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <LinkedInIcon />
               </a>
             )}
