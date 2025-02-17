@@ -9,15 +9,27 @@ const about = {
   description:
     "Experienced Full-Stack Developer with a proven track record of designing and implementing robust applications. Specialized in React,Flutter, NodeJs, MongoDb, ExpressJs,(MERN stack) NextJS, SQL, I excel in optimizing performance and delivering scalable solutions. Proficient in Agile methodologies, project leadership, codebase refactoring, and implementing CI/CD pipelines. Strong problem-solving and communication skills contribute to successful project outcomes.",
   resume:
-    "https://drive.google.com/file/d/1axWbdj17I0pcwZeNbDZuh9wSkGUPqi0v/view?usp=drive_link",
+    "https://drive.google.com/file/d/13XOP8BpmlamMapzv9DDFUkvOQMflGujj/view?usp=sharing",
   social: {
     linkedin: "https://www.linkedin.com/in/akash-thirumuruganantham/",
-    github: "https://github.com",
+    github: "https://github.com/Akash-2204",
   },
   createdBy: "Created by Akash Thirumuruganantham",
 };
 
 const projects = [
+  {
+    name: "Health Metrics Dashboard",
+    description:
+      "Designed and developed a scalable health metrics dashboard using React, Node.js, and MongoDB, delivering real-time analytics for healthcare providers. Integrated MongoDB with WebSocket for real-time updates, reducing latency by 25% and improving decision-making with up-to-the-minute insights.",
+    stack: ["React", "Node.js", "MongoDB", "WebSocket"],
+  },
+  {
+    name: "GitHub Repository Analytics and Forecasting with LLMs",
+    description:
+      "Designed and implemented a system leveraging GitHub API, TensorFlow LSTM, and LangChain to enable semantic search, forecast repository metrics, and identify similar issues. Utilized vector embeddings in Elasticsearch for high-accuracy matching.",
+    stack: ["GitHub API", "TensorFlow", "LSTM", "LangChain", "Elasticsearch"],
+  },
   {
     name: "Queue Management System",
     description:
